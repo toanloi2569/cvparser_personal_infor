@@ -1,0 +1,35 @@
+featurization:
+  textual:
+    window_feature:
+      size: 2
+      combinations: False
+      isolated: False
+    word_feature:
+      window: 7
+  tabular:
+    unary_features:
+      attrib:
+        - words
+      get_cell_ngrams:
+        max: 2
+      get_head_ngrams:
+        max: 2
+      get_row_ngrams:
+        max: 2
+      get_col_ngrams:
+        max: 2
+    binary_features:
+      min_row_diff:
+        absolute: False
+      min_col_diff:
+        absolute: False
+
+learning:
+  LSTM:
+    emb_dim: 100
+    hidden_dim: 100
+    attention: True
+    dropout: 0.1
+    bidirectional: True
+  LogisticRegression:
+    bias: True
