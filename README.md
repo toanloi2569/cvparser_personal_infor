@@ -1,9 +1,6 @@
 # CV Parser
 
-## install fonduer
-[Follow link](https://gitlab.com/datalab.vn/resume.ai/fonduer/-/blob/update_layout_parser/README.md)
-
-## install dependent package
+## install 
 ```
 pip install -r requirements.txt
 ```
